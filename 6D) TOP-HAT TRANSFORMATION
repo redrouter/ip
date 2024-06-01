@@ -1,0 +1,10 @@
+//D) TOP-HAT TRANSFORMATION:-
+i=imread('cameraman.tif');
+se1=strel('square',22);
+im1=imerode(i,se1);
+im2=imdilate(im1,se1);
+h=i-im2;
+subplot(2,2,1),imshow(i),title('Orignal Image');
+subplot(2,2,2),imshow(im1),title('Erotion Image');
+subplot(2,2,3),imshow(im2),title('Dilation Image');
+subplot(2,2,4),imshow(h),title('Top Hat Transformation Image');
